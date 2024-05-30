@@ -1,5 +1,7 @@
 import { FaLinkedin } from "react-icons/fa";
 import { FaSquareGithub } from "react-icons/fa6";
+import { Link } from "react-router-dom";
+import { GrUserAdmin } from "react-icons/gr";
 
 function Footer() {
   return (
@@ -12,13 +14,25 @@ function Footer() {
         <div className="flex flex-col tablet:justify-center tablet:items-center tablet:flex-col mt-4 text-center">
           <p className="mt-2">Created by Stefan Hritcu</p>
           <div className="flex items-center justify-center tablet:mt-2">
-            <a href="https://github.com/StefanHritcu" target="_blank" rel="noopener noreferrer" className="text-3xl mx-2">
+            <a
+              href="https://github.com/StefanHritcu"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-3xl mx-2"
+            >
               <FaSquareGithub />
             </a>
 
-            <a href="https://www.linkedin.com/in/stefan-hritcu-93b67028a/" target="_target" className="text-3xl mx-2">
+            <a
+              href="https://www.linkedin.com/in/stefan-hritcu-93b67028a/"
+              target="_target"
+              className="text-3xl mx-2"
+            >
               <FaLinkedin />
             </a>
+            <Link title="Accesso al Personale" className="text-2xl ml-2" to="/admin123">
+              <GrUserAdmin />
+            </Link>
           </div>
         </div>
       </div>

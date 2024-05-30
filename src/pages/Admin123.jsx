@@ -94,8 +94,9 @@ function Admin123() {
             </Link>
           </div>
 
-          <div className="pt-20 text-center">
+          <div className="pt-20 flex flex-col text-center">
             <h1><span className="text-red-600">Attenzione:</span> Soltanto le persone dello staff potranno accedere alla Dashboard del ristorante!</h1>
+            <Link className="bg-red-700 px-4 rounded-lg py-2 text-white mt-4" to="/admindashboard">Accedi alla dashboard senza registrarti</Link>
           </div>
 
         </div>
