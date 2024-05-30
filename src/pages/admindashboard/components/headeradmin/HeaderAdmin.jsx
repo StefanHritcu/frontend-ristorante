@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setViewNotification } from "../../../../redux/actions";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function HeaderAdmin() {
   const [numberNotifications, setNumberNotifications] = useState(0);
@@ -60,7 +61,23 @@ function HeaderAdmin() {
           {/* ---------------LOGO DASHBOARD--------------- */}
           <div className="flex justify-between items-center text-semibold">
             {/* icon-logo */}
-            <div className="mx-2">
+            <div className="mx-2 flex items-center">
+              <Link title="home" className="mr-6" to="/">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  className="size-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3"
+                  />
+                </svg>
+              </Link>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -120,8 +137,8 @@ function HeaderAdmin() {
 
         {/* ---------------NAVIGATE CALENDER FINO A TABLET--------------- */}
         <div className="bg-blue-600 text-white py-4 flex items-center justify-center tablet:hidden">
-            <NavigableCalender />
-          </div>
+          <NavigableCalender />
+        </div>
       </div>
 
       <div
